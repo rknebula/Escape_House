@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test Game - Admin</title>
+        {% load static %}
+        <link href="{% static 'test_game_app/style.css' %}" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body>
+        <div id="container">
+            <h1>Users</h1>
+            <table>
+                <thead><tr>
+                    <td>id</td>
+                    <td>username</td>
+                    <td>characters</td>
+                </tr></thead>
+                {% for user in all_users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.character }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <h1>Characters</h1>
+            <table>
+                <thead><tr>
+                    <td>id</td>
+                    <td>player</td>
+                    <td>char name</td>
+                    <td>inventory</td>
+                </tr></thead>
+                {% for hero in all_heroes %}
+                <tr>
+                    <td>{{ hero.id }}</td>
+                    <td>{{ hero.player.username }}</td>
+                    <td>{{ hero.name }}</td>
+                    <td>{{ hero.inventory }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <h1>Locations</h1>
+            <table>
+                <thead><tr>
+                    <td>id</td>
+                    <td>name</td>
+                    <td>description</td>
+                    <td>exits</td>
+                </tr></thead>
+                {% for location in all_locations %}
+                <tr>
+                    <td>{{ location.id }}</td>
+                    <td>{{ location.name }}</td>
+                    <td>{{ location.description }}</td>
+                    <td>{% for exit, description in location.exits %}
+                        <p>{{ exit }} - {{ description.name }}</p>
+                    {% endfor %}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>

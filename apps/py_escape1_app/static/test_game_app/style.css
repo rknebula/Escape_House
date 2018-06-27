@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+}
+
+body {
+    color: #000;
+    font-family: arial, "helvetica neue", helvetica, sans-serif;
+    font-size: 14px;
+}
+
+table thead td {
+    font-weight: bold;
+}
+
+td {
+    padding-right: 10px;
+}
+
+#container {
+    padding: 5px;
+    margin: 10px;
+}

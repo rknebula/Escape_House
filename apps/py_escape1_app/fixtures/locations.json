@@ -1,0 +1,91 @@
+{
+    "location" : [
+        {
+            "id" : 0,
+            "name" : "a messy bedroom",
+            "description" : "There is almost no floor to be seen in this spacious bedroom. Whoever lives here clearly doesn't like to clean up after themselves.",
+            "objects" : {
+                "bed" : "a comfy, but messy, bed",
+                // pillow in bed
+                "laundry" : "piles and piles of dirty laundry",
+                "jeans" : "a wrinkled pair of jeans",
+                "socks" : "a pair of surprisingly clean socks",
+            },
+            "exits" : {
+                // north exit: location id 1
+            },
+        },
+        {
+            "id" : 1,
+            "name" : "a narrow hallway",
+            "description" : "This empty hallway is just wide enough for one person to walk through.",
+            "objects" : {
+
+            },
+            "exits" : {
+                // north exit: location id 2
+                // south exit: location id 0
+            },
+        },
+        {
+            "id" : 2,
+            "name" : "a dirty livingroom",
+            "description" : "This livingroom shows signs of use but none that there was any effort made to keep it clean.",
+            "objects" : {
+                "sofa" : "a worn, dark gray sofa",
+                "cookie" : "a half-eaten oatmeal cookie",
+                "leftovers" : "a plate of leftovers",
+                "branch" : "a long tree branch",
+                "napkin" : "a used napkin",
+                "envelope" : "an envelope of bills with writing on it",
+            },
+            "exits" : {
+                // north exit: location id 5
+                // south exit: location id 1
+                // west exit : location id 3
+                // east exit : outside (locked front door)
+            },
+        },
+        {
+            "id" : 3,
+            "name" : "a small kitchen",
+            "description" : "This kitchen is clean compared to the rest of the house. Aside from the microwave, it doesn't seem see much use.",
+            "objects" : {
+                "microwave" : "a dirty microwave",
+                "pot" : "a clean pot",
+                "plates" : "a stack of plates",
+            },
+            "exits" : {
+                // west exit : location id 4
+                // east exit : location id 2
+            },
+        },
+        {
+            "id" : 4,
+            "name" : "a fenced in yard",
+            "description" : "Though small, this yard is well-kept and healthy. Flowers line the edge of the fence, and a pile of leaves has been left by the door.",
+            "objects" : {
+                "flowers" : "a plot of colorful flowers",
+                "leaves" : "a pile of leaves",
+                "rake" : "a wooden rake",
+                "chalk" : "a piece of white chalk",
+            },
+            "exits" : {
+                // east exit : location id 3
+            },
+        },
+        {
+            "id" : 5,
+            "name" : "a small bedroom",
+            "description" : "This tiny bedroom is just big enough for a bed, a dresser, and not much else. The black drapes over the single window do not let in much sunlight.",
+            "objects" : {
+                "bed" : "a small bed",
+                "dresser" : "a simple dresser",
+                "window" : "a window covered by black drapes"
+            },
+            "exits" : {
+                // south exit : location id 2
+            },
+        },
+    ]
+}
